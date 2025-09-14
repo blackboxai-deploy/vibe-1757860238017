@@ -1,0 +1,308 @@
+/* Cinematic Enhancement Styles */
+
+/* Film grain animation */
+@keyframes grain {
+  0% { transform: translate(0, 0) scale(1); }
+  10% { transform: translate(-5%, -10%) scale(1.1); }
+  20% { transform: translate(-15%, 5%) scale(1.05); }
+  30% { transform: translate(7%, -25%) scale(1.08); }
+  40% { transform: translate(-5%, 25%) scale(1.12); }
+  50% { transform: translate(-15%, 10%) scale(1.1); }
+  60% { transform: translate(15%, 0%) scale(1.05); }
+  70% { transform: translate(0%, 15%) scale(1.08); }
+  80% { transform: translate(3%, 35%) scale(1.12); }
+  90% { transform: translate(-10%, 10%) scale(1.1); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+/* VHS tracking lines */
+@keyframes tracking {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(4px); }
+}
+
+/* Holographic shift effect */
+@keyframes holographicShift {
+  0% { 
+    background-position: 0% 50%;
+    filter: hue-rotate(0deg);
+  }
+  25% { 
+    background-position: 100% 50%;
+    filter: hue-rotate(90deg);
+  }
+  50% { 
+    background-position: 100% 100%;
+    filter: hue-rotate(180deg);
+  }
+  75% { 
+    background-position: 0% 100%;
+    filter: hue-rotate(270deg);
+  }
+  100% { 
+    background-position: 0% 50%;
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Cinematic scan line effect */
+@keyframes scanline {
+  0% { transform: translateY(-100vh); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+/* Enhanced glitch animations */
+@keyframes cinematicGlitch1 {
+  0% { transform: translate(0); clip-path: polygon(0 2%, 100% 2%, 100% 5%, 0 5%); }
+  2% { transform: translate(-5px, 5px); clip-path: polygon(0 78%, 100% 78%, 100% 100%, 0 100%); }
+  3% { transform: translate(-5px, -5px); clip-path: polygon(0 78%, 100% 78%, 100% 100%, 0 100%); }
+  4% { transform: translate(-5px, -5px); clip-path: polygon(0 6%, 100% 6%, 100% 9%, 0 9%); }
+  5% { transform: translate(-5px, 0px); clip-path: polygon(0 6%, 100% 6%, 100% 9%, 0 9%); }
+  6% { transform: translate(-5px, -5px); clip-path: polygon(0 50%, 100% 50%, 100% 53%, 0 53%); }
+  7% { transform: translate(-5px, 5px); clip-path: polygon(0 50%, 100% 50%, 100% 53%, 0 53%); }
+  8% { transform: translate(-5px, -5px); clip-path: polygon(0 50%, 100% 50%, 100% 53%, 0 53%); }
+  9% { transform: translate(0); clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 100%); }
+  100% { transform: translate(0); clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 100%); }
+}
+
+@keyframes cinematicGlitch2 {
+  0% { transform: translate(0); }
+  5% { transform: translate(5px, 0px); }
+  10% { transform: translate(-5px, 0px); }
+  15% { transform: translate(15px, 0px); }
+  20% { transform: translate(-10px, 0px); }
+  25% { transform: translate(5px, 0px); }
+  30% { transform: translate(-15px, 0px); }
+  35% { transform: translate(15px, 0px); }
+  40% { transform: translate(-5px, 0px); }
+  45% { transform: translate(-10px, 0px); }
+  50% { transform: translate(5px, 0px); }
+  55% { transform: translate(15px, 0px); }
+  60% { transform: translate(-15px, 0px); }
+  65% { transform: translate(0px, 0px); }
+  100% { transform: translate(0); }
+}
+
+/* Cinematic typing cursor */
+@keyframes cinematicCursor {
+  0%, 50% { opacity: 1; transform: scaleY(1); }
+  51%, 100% { opacity: 0; transform: scaleY(0.1); }
+}
+
+/* Data stream effect */
+@keyframes dataStream {
+  0% { opacity: 0; transform: translateY(-20px) rotateX(90deg); }
+  10% { opacity: 0.7; transform: translateY(0px) rotateX(0deg); }
+  90% { opacity: 0.7; transform: translateY(0px) rotateX(0deg); }
+  100% { opacity: 0; transform: translateY(20px) rotateX(-90deg); }
+}
+
+/* Cinematic light sweep */
+@keyframes lightSweep {
+  0% { transform: translateX(-100%) skewX(-20deg); }
+  100% { transform: translateX(300vw) skewX(-20deg); }
+}
+
+/* Matrix rain enhanced */
+@keyframes matrixRainEnhanced {
+  0% { 
+    transform: translateY(-100vh) rotateZ(0deg); 
+    opacity: 0; 
+  }
+  5% { 
+    opacity: 1; 
+  }
+  95% { 
+    opacity: 1; 
+  }
+  100% { 
+    transform: translateY(100vh) rotateZ(360deg); 
+    opacity: 0; 
+  }
+}
+
+/* Cinematic utility classes */
+.cinematic-glow {
+  filter: drop-shadow(0 0 10px currentColor) drop-shadow(0 0 20px currentColor);
+}
+
+.cinematic-text-shadow {
+  text-shadow: 
+    0 0 5px currentColor,
+    0 0 10px currentColor,
+    0 0 15px currentColor,
+    0 0 20px currentColor;
+}
+
+.cinematic-border-glow {
+  border-color: currentColor;
+  box-shadow: 
+    0 0 5px currentColor,
+    inset 0 0 5px currentColor;
+}
+
+.cinematic-bg-glow {
+  background-color: currentColor;
+  box-shadow: 
+    0 0 10px currentColor,
+    0 0 20px currentColor,
+    0 0 30px currentColor;
+}
+
+/* Chromatic aberration */
+.chromatic-aberration::before,
+.chromatic-aberration::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  z-index: -1;
+}
+
+.chromatic-aberration::before {
+  transform: translateX(-2px);
+  mix-blend-mode: screen;
+  filter: hue-rotate(270deg);
+}
+
+.chromatic-aberration::after {
+  transform: translateX(2px);
+  mix-blend-mode: screen;
+  filter: hue-rotate(90deg);
+}
+
+/* Film strip effect */
+.film-strip {
+  position: relative;
+}
+
+.film-strip::before,
+.film-strip::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #000 0px,
+    #000 10px,
+    transparent 10px,
+    transparent 15px
+  );
+  z-index: 10;
+}
+
+.film-strip::before {
+  left: 0;
+}
+
+.film-strip::after {
+  right: 0;
+}
+
+/* Cinematic transitions */
+.cinematic-slide-in {
+  animation: cinematicSlideIn 1.5s ease-out forwards;
+}
+
+@keyframes cinematicSlideIn {
+  0% {
+    transform: translateY(100px) scale(0.8);
+    opacity: 0;
+    filter: blur(10px);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.05);
+    filter: blur(2px);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+/* Cinematic fade in */
+.cinematic-fade-in {
+  animation: cinematicFadeIn 2s ease-out forwards;
+}
+
+@keyframes cinematicFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+    filter: brightness(0) contrast(2);
+  }
+  50% {
+    filter: brightness(1.2) contrast(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: brightness(1) contrast(1);
+  }
+}
+
+/* Enhanced scrollbar for cinematic feel */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, #000 0%, #111 50%, #000 100%);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00ff41 0%, #00d4ff 50%, #8b5cf6 100%);
+  border-radius: 6px;
+  box-shadow: 
+    0 0 10px rgba(0, 255, 65, 0.5),
+    inset 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  box-shadow: 
+    0 0 20px rgba(0, 255, 65, 0.8),
+    inset 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Cinematic selection */
+::selection {
+  background: linear-gradient(45deg, rgba(0, 255, 65, 0.3), rgba(0, 212, 255, 0.3));
+  color: #ffffff;
+  text-shadow: 0 0 10px currentColor;
+}
+
+/* Performance optimizations for cinematic effects */
+.cinematic-optimized {
+  will-change: transform, opacity, filter;
+  backface-visibility: hidden;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+/* Responsive cinematic effects */
+@media (max-width: 768px) {
+  .cinematic-glow {
+    filter: drop-shadow(0 0 5px currentColor);
+  }
+  
+  .cinematic-text-shadow {
+    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
